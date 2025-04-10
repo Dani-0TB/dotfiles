@@ -10,7 +10,6 @@ zstyle :compinstall filename '/home/dani0tb/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
-. "/home/dani0tb/.deno/env"
 
 # starship
 if [ $TERM != linux ]
@@ -22,41 +21,11 @@ fi
 
 eval "$(starship init zsh)"
 
-#fnm
-export PATH="/home/dani0tb/.local/share/fnm:$PATH"
-eval "$(fnm env --use-on-cd --shell zsh)"
-
 #rust
 . "$HOME/.cargo/env"
 
-# dotnet
-export DOTNET_ROOT=$HOME/.dotnet
-export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
-
-#commander x16
-export X16_ROOT=$HOME/.local/share/x16emu
-export PATH=$PATH:$X16_ROOT
-
-# intelliJ Idea Community
-export IDEA_PATH=$HOME/.local/share/idea-IC/bin
-export PATH=$PATH:$IDEA_PATH
-
-# Postman
-export POSTMAN_PATH=$HOME/programs/Postman
-export PATH=$PATH:$POSTMAN_PATH
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH=$BUN_INSTALL/bin:$PATH
-. "/home/dani0tb/.deno/env"
-
 # nvim as manpager
 export MANPAGER="nvim +Man!"
-
-# Go Lang
-export PATH=$PATH:/usr/local/go/bin
-export GOPATH="$HOME/.go"
-export PATH="$PATH:$GOPATH/bin"
 
 # pfetch config
 export PF_INFO="ascii title os host kernel uptime pkgs memory editor palette"
@@ -73,6 +42,12 @@ alias lah='ls -lah'
 alias duoc="cd $HOME/hdd_home/duoc"
 alias mysqls="sudo systemctl start mysqld"
 alias dbstatus="sudo systemctl status mysqld"
-alias config="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 pfetch
+
+
