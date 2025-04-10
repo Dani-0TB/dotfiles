@@ -1,0 +1,20 @@
+[env]
+TERM = "xterm-256color"
+
+[window]
+dimensions = {columns = 120, lines = 40}
+padding = {x = 2, y = 0}
+dynamic_padding = true
+decorations = "None"
+startup_mode = "Maximized"
+
+[font]
+normal = {family = "0xProto Nerd Font", style="mono"}
+size = 14
+
+[cursor]
+style = {shape = "Block", blinking = "On"}
+blink_timeout = 8
+
+[general]
+import = ["~/.config/alacritty/rose-pine.toml"]
