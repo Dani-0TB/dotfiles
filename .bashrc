@@ -85,4 +85,7 @@ export PF_INFO="ascii title os host kernel uptime pkgs memory editor palette"
 # Editor "the correct one"
 export EDITOR="nvim"
 
+#games
+export PATH=$PATH:/usr/games
+
 pfetch
